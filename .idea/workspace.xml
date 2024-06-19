@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a5c814e-8eec-4eab-bf9f-5c64be2306c7" name="Changes" comment="added effects and a config file for data">
+    <list default="true" id="8a5c814e-8eec-4eab-bf9f-5c64be2306c7" name="Changes" comment="defined some effects and skills">
+      <change afterPath="$PROJECT_DIR$/ControlSystem_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/p_Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p_Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/p_Class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,13 +92,22 @@
       <option name="project" value="LOCAL" />
       <updated>1718803553132</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="defined some effects and skills">
+      <option name="closed" value="true" />
+      <created>1718804266065</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718804266065</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added main and pClass.py" />
     <MESSAGE value="added more setter methodes" />
     <MESSAGE value="added effects and a config file for data" />
-    <option name="LAST_COMMIT_MESSAGE" value="added effects and a config file for data" />
+    <MESSAGE value="defined some effects and skills" />
+    <option name="LAST_COMMIT_MESSAGE" value="defined some effects and skills" />
   </component>
 </project>

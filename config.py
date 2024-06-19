@@ -1,6 +1,7 @@
 
 effects = {
-    "effect_1": {
+    "effect_rand": {
+        "shown_name": "Random",
         "value": 5,
         "duration": 3,
         "description": "A random effect"

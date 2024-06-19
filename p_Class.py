@@ -1,4 +1,5 @@
-
+from config import effects
+from SE_Class import StatusE
 
 class p:
     def __init__(self, name, max_hp, current_hp, ap, defense, can_act, is_alive):
@@ -47,3 +48,8 @@ class p:
 
     def engageOtherEntity(self, selectedE):
         selectedE.set_hp('reduce', self.ap)
+
+    def debufEntity(self, debuff, enemyentity):
+        setDebuff = effects[debuff]
+        giveDebuff = StatusE(setDebuff.get('shown_name'), setDebuff.get('duration'))
+        giveDebuff.applyEffect(enemyentity)
