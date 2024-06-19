@@ -12,3 +12,16 @@ effects = {
     }
 
 }
+
+
+skills = {
+    "s1": {
+        "affectedAttr": ['current_hp', 'ap'],
+        "effect": ['add', 'add'],
+        "values": [200, 20],
+        "duration": [3, 3],
+        "cooldown": 6
+
+
+    }
+}
