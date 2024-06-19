@@ -41,3 +41,7 @@ class p:
 
     def kill_p(self):
         self.is_alive = 0
+
+
+    def engageOtherEntity(self, selectedE):
+        selectedE.set_hp('reduce', self.ap)

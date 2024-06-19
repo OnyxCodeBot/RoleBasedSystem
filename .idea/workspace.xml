@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a5c814e-8eec-4eab-bf9f-5c64be2306c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/turnBasedSystem.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pClass.py" afterDir="false" />
-    </list>
+    <list default="true" id="8a5c814e-8eec-4eab-bf9f-5c64be2306c7" name="Changes" comment="added more setter methodes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +54,28 @@
       <option name="presentableId" value="Default" />
       <updated>1718798579515</updated>
     </task>
+    <task id="LOCAL-00001" summary="added main and pClass.py">
+      <option name="closed" value="true" />
+      <created>1718800704062</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718800704062</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added more setter methodes">
+      <option name="closed" value="true" />
+      <created>1718800992621</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718800992621</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added main and pClass.py" />
+    <MESSAGE value="added more setter methodes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more setter methodes" />
   </component>
 </project>
