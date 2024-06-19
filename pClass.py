@@ -25,3 +25,19 @@ class p:
             else:
                 self.is_alive = 0
 
+    def set_ap(self, action, amount):
+        if action == 'add':
+            self.ap += amount
+
+        if action == 'reduce':
+            self.ap -= amount
+
+    def set_defense(self, action, amount):
+        if action == 'add':
+            self.defense += amount
+
+        if action == 'reduce':
+            self.defense -= amount
+
+    def kill_p(self):
+        self.is_alive = 0
