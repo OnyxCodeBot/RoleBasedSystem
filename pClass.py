@@ -1,12 +1,14 @@
 
 
 class p:
-    def __init__(self, name, max_hp, current_hp, ap, defense, is_alive):
+    def __init__(self, name, max_hp, current_hp, ap, defense, can_act, is_alive):
         self.name = name
         self.max_hp = max_hp
         self.current_hp = current_hp
         self.ap = ap
         self.defense = defense
+        self.can_act = can_act
+        self.applied_effects = []
         self.is_alive = is_alive
 
     def get_name(self):
