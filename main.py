@@ -15,6 +15,7 @@ player.debufEntity("effect_2", enemy)
 enemy.get_attr()
 
 session.updateEffects(enemy)
+session.updateEffects(enemy)
 
 enemy.get_attr()
 

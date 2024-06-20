@@ -39,23 +39,39 @@ class p:
     def set_attribute(self, attr, action, amount): # needs "self.some_attr" for attr
         if hasattr(self, attr):
             if action == 'add':
-                attr += amount
-                setattr(self, attr, +amount)
+                attribut_value = getattr(self, attr)
+                attribut_value += amount
+                setattr(self, attr, attribut_value)
                 self.check_if_over_max_hp()
 
-            if action == 'reduce':
-                attr -= amount
+            elif action == 'reduce':
+                attribut_value = getattr(self, attr)
+                attribut_value -= amount
+                setattr(self, attr, attribut_value)
+                # print("Set ", attr, " to ", attribut_value)
                 self.check_if_eliminated()
+            else:
+                print("something went wrong")
 
     def kill_p(self):
         self.is_alive = 0
 
 
     def engageOtherEntity(self, selectedE):
-        selectedE.set_hp('reduce', self.ap)
+        return selectedE
 
     def debufEntity(self, debuff, enemyentity):
-        giveDebuff = StatusE(str(effects[debuff]['shown_name']), str(effects[debuff]["affected_attribute"]), str(effects[debuff]["effect"]), int(effects[debuff]["value"]), int(effects[debuff]['duration']), int(effects[debuff]["can_be_cleared"]))
+        configSE = effects[debuff]
+
+        e_name = configSE['shown_name']
+        e_attr = configSE["affected_attribute"]
+        e_eff = configSE["effect"]
+        e_value = configSE["value"]
+        e_duration = configSE['duration']
+        e_type = configSE["type"]
+        e_clearable = configSE["can_be_cleared"]
+        giveDebuff = StatusE(e_name, e_attr, e_eff, e_value, e_duration, e_type, e_clearable)
+        # print(e_name, e_attr, e_eff, e_value)
         enemyentity.applied_effects.append(giveDebuff)
 
     def show_own_debuffs(self):

@@ -1,4 +1,8 @@
 
+# types: -----
+# 0 -> One time effect over multiple turns
+# 1 -> effect triggers each turn
+
 effects = {
     "effect_rand": {
         "shown_name": "Afterschocks",
@@ -6,6 +10,7 @@ effects = {
         "effect": "reduce",
         "value": 5,
         "duration": 3,
+        "type": 0,
         "can_be_cleared": 1,
         "description": "A random effect"
     },
@@ -15,6 +20,7 @@ effects = {
         "effect": "reduce",
         "value": 1,
         "duration": 999,
+        "type": 1,
         "can_be_cleared": 0,
         "description": "Another random effect"
     }

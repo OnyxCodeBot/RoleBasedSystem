@@ -2,37 +2,47 @@
 class ControlSystem:
     turn = 0
 
+
+    def clearString(self, string):
+        cleaned_string = string.strip("(),'")
+        return cleaned_string
+
     def updateEffects(self, entity):
         currenteffects = entity.applied_effects
         effectsToRemove = []
-        for effect in currenteffects:
-            dur = effect.duration
+        for oneEffect in currenteffects:
+            dur = oneEffect.duration
             if dur != 999:
                 dur -= 1
-                setattr(effect, "duration", dur)
+                setattr(oneEffect, "duration", dur)
                 if dur <= 0:
-                    effectsToRemove.append(effect)
+                    effectsToRemove.append(oneEffect)
 
-            print(effect.get_effect())
-            affected = effect.attribute
-            mode = effect.get_effect()
-            amount = effect.value
+            affected_attr = oneEffect.get_attribute()
+            mode = oneEffect.get_effect()
+            amount = oneEffect.get_value()
+            effect_type = oneEffect.get_type()
+            string_mode = str(mode)
+            add_or_reduce = self.clearString(string_mode)
 
 
-            if hasattr(entity, str(affected)):
-                print(str(mode))
-                if str(mode) == "add":
-                    oldvalue = getattr(entity, str(affected))
-                    print(oldvalue)
-                    oldvalue += amount
-                    setattr(entity, str(affected), amount)
-                elif str(mode) == "reduce":
-                    oldvalue = getattr(entity, str(affected))
-                    print(oldvalue)
-                    oldvalue += amount
-                    setattr(entity, str(affected), amount)
+            if effect_type == 1:
+                if add_or_reduce == "add":
+                    entity.set_attribute(affected_attr, add_or_reduce, amount)
+                elif add_or_reduce == "reduce":
+                    entity.set_attribute(affected_attr, add_or_reduce, amount)
                 else:
                     print("something went wrong")
+            elif effect_type == 0:
+                if add_or_reduce == "add":
+                    entity.set_attribute(affected_attr, add_or_reduce, amount)
+                    oneEffect.set_value(0)
+                elif add_or_reduce == "reduce":
+                    entity.set_attribute(affected_attr, add_or_reduce, amount)
+                    oneEffect.set_value(0)
+                else:
+                    print("something went wrong")
+
 
         if len(effectsToRemove) > 0:
             for runouteffects in effectsToRemove:
