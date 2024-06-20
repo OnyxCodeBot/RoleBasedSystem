@@ -39,3 +39,37 @@ skills = {
 
     }
 }
+
+
+
+pU = {
+    "Unit1": {
+        "name": "Lukas",
+        "max_hp": 200,
+        "current_hp": 200,
+        "ap": 5,
+        "defense": 2,
+        "can_act": 1,
+        "skill": []
+    },
+    "Unit2": {
+        "name": "Flo",
+        "max_hp": 100,
+        "current_hp": 100,
+        "ap": 30,
+        "defense": 2,
+        "can_act": 1,
+        "skill": []
+    }
+}
+
+
+eEntity = {
+    "name": "Guy",
+    "max_hp": 400,
+    "current_hp": 400,
+    "ap": 33,
+    "defense": 0,
+    "can_act": 1,
+    "skill": []
+}

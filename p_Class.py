@@ -10,6 +10,7 @@ class p:
         self.defense = defense
         self.can_act = can_act
         self.applied_effects = []
+       # self.skill = skill
         self.is_alive = is_alive
 
     def get_name(self):

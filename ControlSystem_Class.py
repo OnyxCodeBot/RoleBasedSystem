@@ -1,7 +1,10 @@
-
+from config import pU
+from p_Class import p
 class ControlSystem:
-    turn = 0
 
+    def __init__(self):
+        self.opponents = []
+        self.team = []
 
     def clearString(self, string):
         cleaned_string = string.strip("(),'")
@@ -47,4 +50,36 @@ class ControlSystem:
         if len(effectsToRemove) > 0:
             for runouteffects in effectsToRemove:
                 currenteffects.remove(runouteffects)
+
+
+
+    def add_opponents(self, array_opp):
+        if len(array_opp) <= 3:
+            for item in array_opp:
+                self.opponents.append(item)
+
+    def add_team(self, array_team):
+        if len(array_team) <= 3:
+            for item in array_team:
+                self.team.append(item)
+
+    def createPEntity(self, name):
+        p_archive = pU[name]
+        if p_archive:
+            name = p(p_archive["name"], p_archive["max_hp"], p_archive["current_hp"], p_archive["ap"], p_archive["defense"], p_archive["can_act"], 1)
+            return name
+
+    def round_system(self):
+        turn_count = 0
+        side = 1
+
+        while len(self.opponents) > 0 and len(self.team) > 0:
+            turn_count += 1
+
+
+
+
+
+
+
 
