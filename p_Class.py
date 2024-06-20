@@ -1,5 +1,6 @@
 from config import effects
 from SE_Class import StatusE
+import random
 
 class p:
     def __init__(self, name, max_hp, current_hp, ap, defense, can_act, is_alive):
@@ -10,7 +11,9 @@ class p:
         self.defense = defense
         self.can_act = can_act
         self.applied_effects = []
-       # self.skill = skill
+        # self.skill = skill
+        # self.accuracy = accuracy
+        # self.resistence = resistence
         self.is_alive = is_alive
 
     def get_name(self):
@@ -59,7 +62,20 @@ class p:
 
 
     def engageOtherEntity(self, selectedE):
-        return selectedE
+        eHP = selectedE.current_hp
+        eDef = selectedE.defense
+        pAP = self.ap
+
+        pAP -= eDef
+
+        # insert evasion chance here
+        # if random.random() < self.accuracy:
+        #    pAP = 0
+
+        eHP -= pAP
+
+        setattr(selectedE, "current_hp", eHP)
+        print(self.name, " attacked ", selectedE.name, " and dealt ", pAP, " Damage!")
 
     def debufEntity(self, debuff, enemyentity):
         configSE = effects[debuff]

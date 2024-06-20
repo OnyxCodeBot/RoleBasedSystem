@@ -23,6 +23,17 @@ effects = {
         "type": 1,
         "can_be_cleared": 0,
         "description": "Another random effect"
+    },
+    "effect3": {
+        "shown_name": "Erosion",
+        "affected_attribute": "current_hp",
+        "effect": "reduce",
+        "value": 0,
+        "duration": 9,
+        "type": 0,
+        "probability": 0.8,
+        "can_be_cleared": 0,
+        "description": "Trait"
     }
 
 }
@@ -30,13 +41,13 @@ effects = {
 
 skills = {
     "s1": {
+        "name": "Flüchten",
+        "required_for_activation": [],
         "affectedAttr": ['current_hp', 'ap'],
         "effect": ['add', 'add'],
         "values": [200, 20],
         "duration": [3, 3],
         "cooldown": 6
-
-
     }
 }
 
@@ -50,10 +61,10 @@ pU = {
         "ap": 5,
         "defense": 2,
         "can_act": 1,
-        "skill": []
+        "skill": ["s1"]
     },
     "Unit2": {
-        "name": "Flo",
+        "name": "Lulu",
         "max_hp": 100,
         "current_hp": 100,
         "ap": 30,
@@ -65,11 +76,14 @@ pU = {
 
 
 eEntity = {
-    "name": "Guy",
-    "max_hp": 400,
-    "current_hp": 400,
-    "ap": 33,
-    "defense": 0,
-    "can_act": 1,
-    "skill": []
+    "e001":{
+        "name": "Verärgerter Kunde",
+        "max_hp": 400,
+        "current_hp": 400,
+        "ap": 33,
+        "defense": 0,
+        "resistence": 0.04,
+        "can_act": 1,
+        "skill": []
+}
 }

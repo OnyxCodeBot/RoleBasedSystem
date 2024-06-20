@@ -1,5 +1,6 @@
 from config import pU
 from p_Class import p
+import random
 class ControlSystem:
 
     def __init__(self):
@@ -63,11 +64,18 @@ class ControlSystem:
             for item in array_team:
                 self.team.append(item)
 
+
     def createPEntity(self, name):
         p_archive = pU[name]
         if p_archive:
             name = p(p_archive["name"], p_archive["max_hp"], p_archive["current_hp"], p_archive["ap"], p_archive["defense"], p_archive["can_act"], 1)
             return name
+
+    def createEEntity(self, name):
+        e_archive = pU[name]
+        if e_archive:
+            name = p()
+
 
     def round_system(self):
         turn_count = 0
@@ -75,6 +83,14 @@ class ControlSystem:
 
         while len(self.opponents) > 0 and len(self.team) > 0:
             turn_count += 1
+            print("Turn ", turn_count)
+            avail_atk = random.randint(0, 3)
+
+            while avail_atk > 0:
+                print("One attack")
+
+            self.opponents.clear()
+
 
 
 
