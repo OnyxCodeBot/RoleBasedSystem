@@ -1,8 +1,26 @@
 
 class StatusE:
-    def __init__(self, name, duration):
+    def __init__(self, name, attribute, effect, value, duration, can_be_cleared):
         self.name = name
+        self.attribute = attribute
+        self.effect = effect,
+        self.value = value
         self.duration = duration
+        self.can_be_cleared = can_be_cleared
 
-    def applyEffect(self, entity):
-        entity.applied_effects.append(self)
+    def get_name(self):
+        return self.name
+
+    def get_attribute(self):
+        return self.attribute
+
+    def get_effect(self):
+        return self.effect
+
+    def get_value(self):
+        return self.value
+
+    def get_duration(self):
+        return self.duration
+
+
